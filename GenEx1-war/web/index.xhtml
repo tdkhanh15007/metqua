@@ -16,8 +16,10 @@
                     </f:validateDoubleRange>                    
                 </h:inputText>
                 <h:outputText value="Birthday:"/>
-                <h:inputText value="#{newJSFManagedBean.birth}" validatorMessage="#{newJSFManagedBean.mess}" required="true">                  
-                    <f:convertDateTime pattern="dd-MM-yyyy"/>
+                <h:inputText value="#{newJSFManagedBean.birth}" converterMessage="khanh khung" required="true">                  
+                    
+                        <f:convertDateTime pattern="dd-MM-yyyy" />
+                    
                 </h:inputText>
                 <h:outputText value="#{newJSFManagedBean.mess}" style="color: red"/>
                 <h:commandButton value="Check" action="#{newJSFManagedBean.action1()}"/>
